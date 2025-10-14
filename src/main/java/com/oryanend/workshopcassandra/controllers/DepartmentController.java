@@ -47,4 +47,11 @@ public class DepartmentController {
         dto = service.update(id, dto);
         return ResponseEntity.ok().body(dto);
     }
+
+    @Transactional
+    @DeleteMapping(value = "/{id}")
+    public ResponseEntity<Void> delete(@PathVariable String id) {
+        service.delete(id);
+        return ResponseEntity.noContent().build();
+    }
 }
