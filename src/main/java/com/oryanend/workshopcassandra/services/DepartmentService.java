@@ -3,6 +3,7 @@ package com.oryanend.workshopcassandra.services;
 import com.oryanend.workshopcassandra.model.dto.DepartmentDTO;
 import com.oryanend.workshopcassandra.model.entities.Department;
 import com.oryanend.workshopcassandra.repositories.DepartmentRepository;
+import com.oryanend.workshopcassandra.services.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,7 +23,7 @@ public class DepartmentService {
 
     public DepartmentDTO findById(String id) {
         Optional<Department> result = repository.findById(UUID.fromString(id));
-        Department entity = result.orElseThrow(() -> new RuntimeException("Department not found"));
+        Department entity = result.orElseThrow(() -> new ResourceNotFoundException("Id não encontrado"));
         return new DepartmentDTO(entity);
     }
 
