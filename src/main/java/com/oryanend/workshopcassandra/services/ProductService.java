@@ -7,6 +7,7 @@ import com.oryanend.workshopcassandra.services.exceptions.ResourceNotFoundExcept
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -24,6 +25,11 @@ public class ProductService {
     private Product getById(String id) {
         Optional<Product> result = repository.findById(UUID.fromString(id));
         return result.orElseThrow(() -> new ResourceNotFoundException("Id não encontrado"));
+    }
+
+    public List<ProductDTO> findByDepartment(String department) {
+        List<Product> list = repository.findByDepartment(department);
+        return list.stream().map(ProductDTO::new).toList();
     }
 
 }

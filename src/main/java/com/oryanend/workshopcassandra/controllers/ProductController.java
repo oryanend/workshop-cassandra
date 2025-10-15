@@ -5,10 +5,9 @@ import com.oryanend.workshopcassandra.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping(value = "/products")
@@ -23,4 +22,11 @@ public class ProductController {
         ProductDTO dto = service.findById(id);
         return ResponseEntity.ok().body(dto);
     }
+
+    @GetMapping
+    public ResponseEntity<List<ProductDTO>> findByDepartment(@RequestParam(name = "department", defaultValue = "") String department) {
+        List<ProductDTO> list = service.findByDepartment(department);
+        return ResponseEntity.ok().body(list);
+    }
+
 }
