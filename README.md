@@ -137,5 +137,5 @@ Com a coleção disponível no Postman, você poderá testar facilmente todos os
 
 # 👥 Autor
 
-| [<img src="https://avatars.githubusercontent.com/u/135620793?v=4" width=115><br><sub>Ryan Oliveira</sub>](https://github.com/matheusvidal21) |
+| [<img src="https://avatars.githubusercontent.com/u/135620793?v=4" width=115><br><sub>Ryan Oliveira</sub>](https://github.com/oryanend) |
 | :---: |
