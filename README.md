@@ -8,12 +8,6 @@
     <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white"/>
 </p>    
 
-<p align="center">
-  <img src="docs/logo.png" alt="Logo DSCommerce" height="300">
-</p>
-
-[Testando endpoints.webm](https://github.com/matheusvidal21/DSCommerce/assets/102569695/8dc7beb7-7542-48c1-a731-dda4f41c7507)
-
 # 🔍 Visão Geral
 <p>
 O <strong>Workshop Cassandra</strong> é um projeto prático desenvolvido com <strong>Java Spring Boot</strong> e <strong>Apache Cassandra</strong>, com o objetivo de demonstrar a modelagem e a manipulação de dados em um banco NoSQL utilizando um cenário de produtos e departamentos.
@@ -62,7 +56,7 @@ O tipo da propriedade é definido pelo enumerador <strong>PropType</strong>, que
 </p>
 
 <p align="center">
-  <img src="docs/modelo_conceitual.png" alt="Modelo conceitual">
+  <img src="assets/cassandra-workshop.jpg" alt="Modelo conceitual">
 </p>
 
 # 📁 Estrutura de pacotes
